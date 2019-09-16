@@ -13,11 +13,13 @@ pour vérifier qu'elle existe : `printenv MY_VAR` .<br>
 output : `test`.
 
 #### 5. Tapez ensuite la commande bash. Que fait-elle ? La variable MY_VAR existe-t-elle ? Expliquez. A la fin de cette question, tapez la commande exit pour revenir dans votre session initiale.
+Elle ouvre un nouveau niveau sur le shell. La variable MY_VAR n'existe pas dans ce shell car c'est une variable locale à l'autre shell. 
 
 #### 6. Transformez MY_VAR en une variable d’environnement et recommencez la question précédente. Expliquez.
 pour transformer cette variable en variable d'environnement il faut taper `export MY_VAR="test"`. On peut alors utiliser la commande `printenv MY_VAR` pour récuperer la valeur de la variable (_test_).
 
 #### 7. Créer la variable d’environnement NOMS ayant pour contenu vos noms de binômes séparés par un espace. Afficher la valeur de NOMS pour vérifier que l’affectation est correcte.
+
 
 #### 8. Ecrivez une commande qui affiche ”Bonjour à vous deux, binôme1 binôme2 !” (où binôme1 et binôme2 sont vos deux noms) en utilisant la variable NOMS.
 
