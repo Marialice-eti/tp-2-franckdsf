@@ -31,5 +31,15 @@ Quand on donne une valeur vide à une variable, celle-ci reste utilisable. Si on
 
 #### 10. Utilisez la commande echo pour écrire exactement la phrase : $HOME = chemin (où chemin est votre dossier personnel d’après bash)
 
-`echo $HOME = $HOME`
+`echo '$HOME' = "$HOME"`
+ou
+`echo "\$HOME = $HOME"`
 output = `$HOME = /home/server`
+
+### Programmation Bash
+
+Il suffit d'utiliser `mkdir script` pour créer un dossier.
+Puis de l'ajouter au PATH avec `PATH=$PATH:~/script`.
+
+ #### Exercice 2. Contrôle de mot de passe
+
