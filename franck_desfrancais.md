@@ -61,3 +61,5 @@ ctrl+S pour sauvegarder
 ctrl+X pour quitter
 puis lui donner les droits avec `chmod u+x hello.sh`
 puis l'executer avec `testpwd.sh`
+
+#### Exercice 3. Expressions rationnelles
