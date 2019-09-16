@@ -1,7 +1,7 @@
 #### 1. Dans quels dossiers bash trouve-t-il les commandes tapées par l’utilisateur ?
 avec `echo $PATH` on retrouve tous les chemins des commandes. elles sont localisées dans le dossier /usr/local/.
 #### 2. Quelle variable d’environnement permet à la commande cd tapée sans argument de vous ramener dans votre répertoire personnel ?
-
+c'est la variable `$HOME`.
 #### 3. Explicitez le rôle des variables LANG, PWD, OLDPWD, SHELL et _.
 
 #### 4. Créez une variable locale MY_VAR (le contenu n’a pas d’importance). Vérifiez que la variable existe.
