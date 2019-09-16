@@ -111,3 +111,82 @@ else
         fi
 fi
 ```
+
+#### Exercice 5. Factorielle
+
+```
+#!/bin/sh 
+ 
+fact() { 
+        n=$1 
+        if [ $n -eq 0 ] 
+        then 
+                echo 1 
+        else 
+                echo $(( n * `fact $(( n - 1 ))` )) 
+        fi 
+} 
+ 
+echo `fact $1`
+```
+
+#### Exercice 6. Le juste prix
+```
+#!/bin/sh 
+NOMBRE=$(( ( RANDOM % 100 )  + 1 ))
+USER_NB=-1
+
+
+echo "devinez le nombre que j'ai choisi (entre 1 et 100)"
+while [ $NOMBRE != $USER_NB ]
+do
+        echo $NOMBRE
+        read USER_NB
+
+        if [ $NOMBRE -lt $USER_NB ]; then
+                echo "il est plus petit, recommencez"
+        elif [ $NOMBRE -gt $USER_NB ]; then
+                echo "il est plus grand, recommencez"
+        fi
+done
+
+echo "bravo vous avez trouvé !"
+```
+#### Exercice 7. Statistiques
+```
+#!/bin/sh
+
+keep=1
+i=0
+marks=()
+
+while [ $keep != 0 ]
+do
+        echo "entrez une note"
+        read marks[$i]
+
+        echo "continuer ? o / n"
+        read answer
+        if [ "$answer" = "n" ]; then
+                keep=0;
+        fi
+
+        ((i++))
+done
+
+mini=${marks[0]}
+maxi=${marks[0]}
+moy=0
+for mark in "${marks[@]}"
+do
+        if [[ $mark < $mini ]]; then
+                mini=$mark
+        fi
+        if [[ $mark > $maxi ]]; then
+                maxi=$mark
+        fi
+        ((moy=moy+mark))
+done
+
+echo "le max est $maxi, le min est $mini et la moyenne est de $moy"
+```
