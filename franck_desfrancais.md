@@ -45,17 +45,21 @@ Puis de l'ajouter au PATH avec `PATH=$PATH:~/script`.
 
 pour créer le script il faut effectuer cette commande `nano testpwd.sh`
 lui ajouter :<br>
-`PASSWORD="Ak18"
+```
+#!/bin/bash
+
+PASSWORD="Ak18"
 PASS_CHECK=""
 
 echo "entrez un mot de passe"
-read PASS_CHECK
+read -s PASS_CHECK
 
 if[ $PASSWORD = $PASS_CHECK ]; then
    echo "connecté"
 else
    echo "mauvais mot de passe"
-fi`
+fi
+```
 
 ctrl+S pour sauvegarder
 ctrl+X pour quitter
@@ -63,3 +67,47 @@ puis lui donner les droits avec `chmod u+x hello.sh`
 puis l'executer avec `testpwd.sh`
 
 #### Exercice 3. Expressions rationnelles
+```                                            
+#!/bin/bash
+
+function is_number(){
+ re='^[+-]?[0-9]+([.][0-9]+)?$'
+ if ! [[ $1 =~ $re ]] ; then
+  return 1
+ else
+  return 0
+ fi
+}
+
+is_number $1
+if [ "$?" = "0" ]; then
+        echo "c'est un float"
+else
+        echo "ce n'est pas un float"
+fi
+```
+#### Exercice 4. Contrôle d’utilisateur
+
+```
+#!/bin/bash
+
+INPUT_USER=$1
+FILENAME="${0##*/}"
+USERS=$(cut -d: -f1 /etc/passwd)
+
+if [ -z "$INPUT_USER" ]; then
+        echo "Utilisation: $FILENAME nom_utilisateur"
+else
+        EXIST=0
+        for user in  $USERS
+        do
+                if [ "$user" = "$INPUT_USER" ]; then
+                        echo "l'utilisateur existe"
+                        EXIST=1
+                fi
+        done
+        if [ $EXIST -eq 0 ]; then
+                echo "l'utilisateur n'existe pas"
+        fi
+fi
+```
