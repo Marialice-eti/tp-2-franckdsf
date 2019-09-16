@@ -43,3 +43,21 @@ Puis de l'ajouter au PATH avec `PATH=$PATH:~/script`.
 
  #### Exercice 2. Contrôle de mot de passe
 
+pour créer le script il faut effectuer cette commande `nano testpwd.sh`
+lui ajouter :<br>
+`PASSWORD="Ak18"
+PASS_CHECK=""
+
+echo "entrez un mot de passe"
+read PASS_CHECK
+
+if[ $PASSWORD = $PASS_CHECK ]; then
+   echo "connecté"
+else
+   echo "mauvais mot de passe"
+fi`
+
+ctrl+S pour sauvegarder
+ctrl+X pour quitter
+puis lui donner les droits avec `chmod u+x hello.sh`
+puis l'executer avec `testpwd.sh`
