@@ -5,13 +5,13 @@ c'est la variable `$HOME`.
 #### 3. Explicitez le rôle des variables LANG, PWD, OLDPWD, SHELL et _.
 la variable d’environnement _LANG_ détermine la langue que les logiciels utilisent pour communiquer avec l’utilisateur la variable d'environnement _PWD_ contient le répertoire de travail courant de l'interpréteur de commande. la variable d'environnement _OLDPWD_ contient le chemin absolu vers le répertoire courant précédent la variable d'environnement _SHELL_ indique l'interpréteur shell utilisé par défaut, ici c'est `/bin/bash`
 #### 4. Créez une variable locale MY_VAR (le contenu n’a pas d’importance). Vérifiez que la variable existe.
-pour créer la variable : `export MY_VAR="test"`.
-pour vérifier qu'elle existe : `printenv MY_VAR` .
-résultat : `test`.
+pour créer la variable : `MY_VAR="test"`.<br>
+pour vérifier qu'elle existe : `printenv MY_VAR` .<br>
+output : `test`.
 #### 5. Tapez ensuite la commande bash. Que fait-elle ? La variable MY_VAR existe-t-elle ? Expliquez. A la fin de cette question, tapez la commande exit pour revenir dans votre session initiale.
 
 #### 6. Transformez MY_VAR en une variable d’environnement et recommencez la question précédente. Expliquez.
-
+pour transformer cette variable en variable d'environnement il faut taper `export MY_VAR="test"`. On peut alors utiliser la commande `printenv MY_VAR` pour récuperer la valeur de la variable (_test_).
 #### 7. Créer la variable d’environnement NOMS ayant pour contenu vos noms de binômes séparés par un espace. Afficher la valeur de NOMS pour vérifier que l’affectation est correcte.
 
 #### 8. Ecrivez une commande qui affiche ”Bonjour à vous deux, binôme1 binôme2 !” (où binôme1 et binôme2 sont vos deux noms) en utilisant la variable NOMS.
