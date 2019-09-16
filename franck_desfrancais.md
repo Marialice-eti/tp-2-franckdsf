@@ -3,7 +3,7 @@ avec `echo $PATH` on retrouve tous les chemins des commandes. elles sont localis
 #### 2. Quelle variable d’environnement permet à la commande cd tapée sans argument de vous ramener dans votre répertoire personnel ?
 c'est la variable `$HOME`.
 #### 3. Explicitez le rôle des variables LANG, PWD, OLDPWD, SHELL et _.
-
+la variable d’environnement _LANG_ détermine la langue que les logiciels utilisent pour communiquer avec l’utilisateur la variable d'environnement _PWD_ contient le répertoire de travail courant de l'interpréteur de commande. la variable d'environnement _OLDPWD_ contient le chemin absolu vers le répertoire courant précédent la variable d'environnement _SHELL_ indique l'interpréteur shell utilisé par défaut, ici c'est `/bin/bash`
 #### 4. Créez une variable locale MY_VAR (le contenu n’a pas d’importance). Vérifiez que la variable existe.
 
 #### 5. Tapez ensuite la commande bash. Que fait-elle ? La variable MY_VAR existe-t-elle ? Expliquez. A la fin de cette question, tapez la commande exit pour revenir dans votre session initiale.
